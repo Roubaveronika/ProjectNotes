@@ -1,0 +1,11 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url(https://bogatyr.club/uploads/posts/2023-03/1679082462_bogatyr-club-p-podstavka-fon-foni-instagram-4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

@@ -1,11 +1,237 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+}
+
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
 }
 body {
-    background-image: url(https://bogatyr.club/uploads/posts/2023-03/1679082462_bogatyr-club-p-podstavka-fon-foni-instagram-4.jpg);
+    background:url(https://bogatyr.club/uploads/posts/2023-03/1679082462_bogatyr-club-p-podstavka-fon-foni-instagram-4.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
+#app {
+    padding: 10px 64px 0 64px;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6))
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+.header-countNotes {
+    font-size: 18px;
+    color: forestgreen;
+    font-weight: bold;
+}
+
+.note-form {
+    border: 1px solid #88cc88;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1400px;
+    height: 228px;
+    padding: 24px;
+    margin-top: 24px;
+    margin-bottom: 10px;
+}
+.btn-addNote-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 232px;
+    height: 108px;
+
+}
+fieldset {
+    all: unset;
+}
+
+legend {
+    all: unset
+}
+
+.radio-list {
+    display: flex;
+    gap: 14px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.note-color {
+    display: flex;
+    gap: 14px;
+    flex-direction: column;
+    height: 100%;
+}
+.radio {
+    appearance: none;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: green;
+}
+
+.radio[value="red"] {
+    background-color: red;
+}
+
+.radio[value="green"] {
+    background-color: green;
+}
+
+.radio[value="blue"] {
+    background-color: blue;
+}
+
+.radio[value="yellow"] {
+    background-color: yellow;
+}
+
+.radio[value="purple"] {
+    background-color: purple;
+}
+.note-color .btn-addNote {
+    margin-top: auto; /* Это прижмет кнопку к низу */
+}
+.radio:checked {
+    border-color: white;
+    box-shadow: 0 0 0 3px white, /* Внутренняя обводка для создания промежутка */
+    0 0 0 4.5px #007BFF; /* Внешняя обводка */
+}
+.btn-addNote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+    gap:8px;
+    border: none;
+    cursor: pointer;
+    width: 232px;
+    height: 36px;
+    background-color: royalblue;
+    color: white;
+    border-bottom-color: royalblue;
+    border-radius: 8px;
+    font-size: 16px;
+}
+.icon-addNote {
+    width: 24px;
+    height: 24px;
+    filter: invert(1);
+}
+
+.note-form-title {
+    width: 344px;
+    height: 60px;
+}
+    label {
+        color: forestgreen;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    input {
+        width: 700px;
+        height: 36px;
+        padding: 10px;
+        font-size: 14px;
+        margin-top: 10px;
+        border-radius: 8px;
+        border: none;
+        background-color: #cbf1cb;
+    }
+
+.note-form-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    height: 108px;
+    padding: 10px 0 12px 0;
+    flex-grow: 1;
+}
+
+.note-body {
+    margin-top: 12px;
+    box-sizing: border-box;
+    width: 848px;
+    height: 108px;
+    display: flex;
+    flex-direction: column;
+}
+label {
+    color: forestgreen;
+    font-size: 14px;
+    font-weight: bold;
+}
+  .input-noteText {
+        padding: 10px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 8px;
+        background-color: #cbf1cb;
+        font-size: 14px;
+        width: 1048px;
+        height: 84px;
+        resize: none;
+    }
+
+#message {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    color: forestgreen;
+    margin-top: 138px;
+    font-weight: bold;
+}
+#message2 {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    color: forestgreen;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.filter-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    right:64px;
+}
+.filter-box input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.filter-box label {
+    font-size: 16px;
+    font-weight: bold;
+    color: forestgreen;
+    cursor: pointer;
+}
+.note-list {
+    display: flex;
+    gap:12px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1400px;
+}
+.messages-box { position: fixed; bottom: 10px; right: 10px; z-index: 100; }
+.message { padding: 10px 15px; margin-bottom: 5px; border-radius: 5px; background-color: lightgreen; color: darkgreen; }
+.message.error { background-color: #ffcccc; color: #a94442; }
+.message.success { background-color: #ccffcc; color: #3c763d; }
+
+
+

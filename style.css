@@ -29,6 +29,7 @@ body {
     font-size: 18px;
     color: forestgreen;
     font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
 }
 
 .note-form {
@@ -81,23 +82,23 @@ legend {
 }
 
 .radio[value="red"] {
-    background-color: red;
+    background-color: #FFABAB;
 }
 
 .radio[value="green"] {
-    background-color: green;
+    background-color: #A8E6A1;
 }
 
 .radio[value="blue"] {
-    background-color: blue;
+    background-color: #A0C4FF;
 }
 
 .radio[value="yellow"] {
-    background-color: yellow;
+    background-color: #FFEC99;
 }
 
 .radio[value="purple"] {
-    background-color: purple;
+    background-color: #D4A5D9;
 }
 .note-color .btn-addNote {
     margin-top: auto; /* Это прижмет кнопку к низу */
@@ -137,6 +138,7 @@ legend {
         color: forestgreen;
         font-size: 14px;
         font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
     }
 
     input {
@@ -147,7 +149,7 @@ legend {
         margin-top: 10px;
         border-radius: 8px;
         border: none;
-        background-color: #cbf1cb;
+        background-color: rgba(255, 255, 255, 0.5);
     }
 
 .note-form-body {
@@ -169,17 +171,18 @@ legend {
     display: flex;
     flex-direction: column;
 }
-label {
+.label {
     color: forestgreen;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.4);
 }
   .input-noteText {
         padding: 10px;
         margin-top: 10px;
         border: none;
         border-radius: 8px;
-        background-color: #cbf1cb;
+        background-color: rgba(255, 255, 255, 0.5);
         font-size: 14px;
         width: 1048px;
         height: 84px;
@@ -218,20 +221,88 @@ label {
     font-size: 16px;
     font-weight: bold;
     color: forestgreen;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.4);
     cursor: pointer;
 }
-.note-list {
+.notes-container {
+    margin-top: 64px;
     display: flex;
-    gap:12px;
-    margin-top: 12px;
     flex-wrap: wrap;
-    width: 100%;
-    max-width: 1400px;
+    gap: 12px;
+    justify-content: space-between;
+
+}
+.note-text {
+    display: flex;
+    padding-top: 48px;
+    font-size: 16px;
+
+}
+
+.notes-list {
+    display: flex;
+    flex-wrap: wrap; /* Перенос элементов */
+    gap: 12px;
+    width: 100%; /* Разрешаем элементам заполнять пространство */
+}
+.note {
+    position: relative;
+    width: 438px;
+    height: auto;
+    border: 0.5px solid #88cc88;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
+}
+.note-header {
+    width: 438px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
 }
 .messages-box { position: fixed; bottom: 10px; right: 10px; z-index: 100; }
-.message { padding: 10px 15px; margin-bottom: 5px; border-radius: 5px; background-color: lightgreen; color: darkgreen; }
-.message.error { background-color: #ffcccc; color: #a94442; }
-.message.success { background-color: #ccffcc; color: #3c763d; }
+.message { display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-size: 14px;
+    color: white;
+}
+.message.error { background-color: red;
+    color: white;
+    border-radius: 10px; }
+.message.success { background-color: green;
+    color: white;
+    border-radius: 10px; }
+.message img {
+    filter: invert(1);
+}
+.favorite-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 40px;
+}
+.delete-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
 
 
 

@@ -254,7 +254,7 @@ legend {
     background: transparent;
     display: flex;
     flex-direction: column;
-    padding: 6px;
+    padding: 10px;
 }
 .note-header {
     width: 438px;
